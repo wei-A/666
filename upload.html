@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+    <style type="text/css"> 
+        #picBox{
+            margin-top: 20px;
+            width:205px;
+            border: 1px solid red;
+        }
+        #picBox img {
+            width:100px;
+            height: 100px;
+            margin-left: 5px;
+        }
+        #picBox img:nth-of-type(odd){
+            margin-left: 0px;
+        }
+        #wrap{
+            position:relative;
+            width: 300px;
+            height: 1000px;
+            border: 1px solid red;
+        }
+         #wrap img{
+            position:absolute;
+            width:100px;
+            height: 100px;
+            margin-left: 5px;
+         }
+    </style>
+</head>
+<body>
+    <input type="file" accept="image/*" name="file[]" id="file" multiple>
+    <div id="picBox"></div>
+    <div id="wrap"></div>
+    <script type="text/javascript">
+        var file = document.getElementById("file");
+        var picBox = document.getElementById("picBox");
+        var wrap = document.getElementById("wrap")
+        var wrap1 = document.getElementById("wrap1")
+        var flag = true;
+        //显示上传图片的信息
+         file.onchange = function() {
+            var files = this.files;                
+            //picBox.innerHTML = "";
+            for(var i = 0; i < files.length; i++) {
+                var img = document.createElement("img")
+                img.src = files[i].name
+                picBox.appendChild(img)
+            }
+            var imglist = document.querySelectorAll("#picBox img")
+            var wrapPos = wrap.getBoundingClientRect()//获取块wrap的文档坐标
+            console.log(wrapPos)
+            for (var i = 0; i < imglist.length; i++) {
+                imglist[i].onmousedown = function(e){
+                    flag = true;
+                    var e = e || e.event;
+                    var imglistPos = this.getBoundingClientRect()//获取mousedown的图片文档坐标
+                    console.log(imglistPos)
+                          
+                    var posX = e.clientX - imglistPos.left//获取mousedown x轴与所点击图片左上角的距离
+                    var posY = e.clientY - imglistPos.top//获取mousedown y轴与所点击图片左上角的距离
+
+                    var imgs = this
+                    document.onmousemove = function(e){
+                        var e = e || e.event;
+                        document.onmouseup = function(e){
+                            var e = e || e.event;
+                            var target = e.target || e.srcElement;
+                            var x = e.clientX - wrapPos.left - posX
+                            var y = e.clientY - wrapPos.top - posY
+                            var img  = imgs.cloneNode()
+                            img.style.left = x+"px"
+                            img.style.top = y+"px"
+                            if(flag && target.id == "wrap"){
+                                 wrap.appendChild(img);                            
+                            }
+                            document.onmousemove = null
+                            flag = false;
+                        }
+                    }
+                    e.preventDefault();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+    
