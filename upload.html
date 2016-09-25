@@ -52,10 +52,6 @@
                     console.log(src)
                     var img = new Image();
                     img.src = src;
-                    img.onload = function() {
-                        //图片加载完毕之后，释放资源
-                        url.revokeObjectURL(src);
-                    }
                     picBox.appendChild(img);
                 }else if(window.FileReader) {
                     var fr = new FileReader();
