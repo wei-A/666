@@ -49,6 +49,7 @@
                 var url = window.URL || window.webkitURL;
                 if(url) {
                     var src = url.createObjectURL(files[i]);
+                    console.log(src)
                     var img = new Image();
                     img.src = src;
                     img.onload = function() {
