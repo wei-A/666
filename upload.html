@@ -42,13 +42,30 @@
         var wrap1 = document.getElementById("wrap1")
         var flag = true;
         //显示上传图片的信息
-         file.onchange = function() {
-            var files = this.files;                
-            //picBox.innerHTML = "";
-            for(var i = 0; i < files.length; i++) {
-                var img = document.createElement("img")
-                img.src = files[i].name
-                picBox.appendChild(img)
+          file.onchange = function() {
+                var files = this.files;                
+                for(var i = 0; i < files.length; i++) {
+                //显示上传图片的缩略图
+                var url = window.URL || window.webkitURL;
+                if(url) {
+                    var src = url.createObjectURL(files[i]);
+                    var img = new Image();
+                    img.src = src;
+                    img.onload = function() {
+                        //图片加载完毕之后，释放资源
+                        url.revokeObjectURL(src);
+                    }
+                    picBox.appendChild(img);
+                }else if(window.FileReader) {
+                    var fr = new FileReader();
+                    fr.readAsDataURL(files[i]);//将图片文件转换成base64位
+                    //课下去使用 readAsText()
+                    fr.onload = function(e) {
+                        var img = new Image();
+                        img.src = this.result;
+                        picBox.appendChild(img);
+                    }
+                }
             }
             var imglist = document.querySelectorAll("#picBox img")
             var wrapPos = wrap.getBoundingClientRect()//获取块wrap的文档坐标
