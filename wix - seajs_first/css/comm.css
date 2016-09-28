@@ -1,0 +1,187 @@
+/* 
+* @Author: Marte
+* @Date:   2016-09-12 15:45:36
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-09-21 15:27:08
+*/ 
+         /*存放动态生成元素的外边框*/
+        #rap{
+            height:600px;
+            /*background-color:pink;*/
+            position:relative;
+        }
+        #wrapAlbum{
+            position:relative;
+            height:600px;
+        }
+        #album{
+
+            position:absolute;
+            top:30px;
+            left:0px;
+            /*width:940px;*/
+            width:1000px;
+            min-width:935px;
+            height:366px;
+            border:2px solid blue;
+            background-color:rgba(125, 125, 0, 0.3);
+            cursor:move;
+        }
+        #wdiv{
+            /*width:300px;*/
+            width:32%;
+            height:169px;
+            float:left;
+            margin-left:10px;
+            margin-top:10px;
+            overflow: hidden;
+            position:relative;
+            /*background-color: red;*/
+        }
+        #indiv{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background-color:black;
+            opacity:0.5;
+            top:0;
+            left:0;
+            z-index:-1;
+            color:white;
+            text-align: center;
+            line-height: 169px;
+            font-size: 25px;
+        }
+
+        #album img{
+            width:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            /*cursor:move;*/
+        }
+        #aaa{
+            height:400px;
+            background-color:cyan;
+        }
+        #wrapAlbum{
+            position: relative;
+        }
+        #wrapNav{
+            position:relative;
+            height:40px;
+            width:100%;
+        }
+        #nav{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+        }
+        #nav>li{
+            float:left;
+            list-style: none;
+            margin-top: 10px;
+            margin-bottom:10px;
+            width:20%;
+            text-align: center;
+            cursor:move;
+        }
+        #nav>li>a{
+            text-decoration:none;   
+            color:black;
+            outline: none;
+        }
+        #nav{
+            border-top:1px solid black;
+            border-bottom:1px solid black;
+            min-width: 550px;
+            background-color:rgba(0, 0, 0, 0.5);
+        }   
+       .block{
+            width:100px;
+            height:100px;
+            min-width:50px;
+            min-height:50px;
+            border:1px solid black;
+            position:absolute;
+            top:0;
+            left:0;
+            background-color:white;
+         }
+        .imgbox{
+            position:absolute;
+            width:100px;
+            height:100px;
+            min-width:50px;
+            top:0;
+            left:0;
+        }
+        .imgbox img{
+            position:absolute;
+            width:100%;
+            top:0;
+            left:0;
+
+        }
+        .pblock{
+            position:absolute;
+            text-align: center;
+            outline:none;
+        }
+        /*轮播图*/
+        .wrapbox{
+            width:300px;
+            height:169px;
+            overflow:hidden;
+            position:absolute;
+        }
+        .innerbox{
+            width:900px;
+            height:169px;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .innerbox img{
+            width:33.3%;
+            float:left;
+            cursor:move;
+        }
+        .buttonlist{
+            text-align: center;
+            height:20px;
+            width:100%;
+            position:absolute;
+            left:0;
+            bottom:0px;
+        }
+        .button{
+            display: inline-block;
+            width:15px;
+            height:15px;
+            border-radius:50%;
+            background-color:blue;
+        }
+        .btn_left{
+            left:0;
+            position:absolute;
+            z-index:2;
+            font-size:35px;
+            color:red;
+            height:100%;
+            line-height: 169px;
+            background-color:black;
+            opacity:0.5;
+        }
+        .btn_right{
+            right:0;
+            position:absolute;
+            z-index:2;
+            font-size:35px;
+            color:red;
+            height:100%;
+            line-height: 169px;
+            background-color:black;
+            opacity:0.5;
+        }

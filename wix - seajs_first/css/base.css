@@ -1,0 +1,21 @@
+/* 
+* @Author: Marte
+* @Date:   2016-09-13 13:34:07
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-09-13 13:34:54
+*/
+        *{
+            padding:0;
+            margin:0;
+        }
+        .clearfix:after{
+            clear:both;
+            content:'.';
+            display:block;
+            width: 0;
+            height: 0;
+            visibility:hidden;
+        }
+        .clearfix {
+            zoom:1;
+            }    /*==for IE6/7 Maxthon2==*/

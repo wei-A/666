@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/comm.css" />
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <style type="text/css">
+
+         /*放大缩小的下拉滑块*/
+         span{
+            width:20px;
+            height:20px;
+            background-color:black;
+            opacity:0.2;
+            position:absolute;
+            bottom:0;
+            right:0;
+            cursor:se-resize;
+         } 
+
+        </style>
+    </head>
+    <body>
+    <p style="text-align:center;font-size:30px;">这是第二个编辑页</p>
+    <button id = "btn">点击一下创建div标签</button>
+    <button id="btn1">点击一下创建p标签</button>
+    <button id="btn2">点击创建图片</button>
+    <button id="btn3">点击创建相册</button>
+    <button id="btn4">点击创建导航栏</button>
+    <label for="">
+    选择图片
+   <select name="" id="Imgsrc">
+        <option >1.jpg</option>
+        <option >2.jpg</option>
+        <option >3.jpg</option>
+        <option >4.jpg</option>
+        <option >5.jpg</option>
+        <option >6.jpg</option>
+        <option >7.jpg</option>
+   </select>
+   </label>
+    <label >
+        请改变颜色
+        <input type="color" value="#000000" id="color">
+    </label>
+    <label >
+    链接
+     <input type="text" id="lianjie" / value="http://www.cctv.com">   
+    </label>
+    <button id="imgsrcChange">更改相册图片链接</button>
+    <button id="asrcChange">更改a标签链接</button>
+<!--     <label >
+        请改变粗细
+        <input id = "bwide" type="text" />
+    </label>
+    <label >
+        请改变边线透明度
+        <input id = "bopacity" type="text" />
+    </label> -->
+    <button id="submit">保存</button>
+    <a href="canvastextbase11.html">预览</a>
+    <div id="wrapNav"></div>
+    <div id="rap"></div>
+    <div id="wrapAlbum">
+<!--         <div id="album">
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg1" class="0"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg2" class="1"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg3" class="2"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg4" class="3"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg5" class="4"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg6" class="5"></a>
+        </div>   -->
+    </div>
+    <script type="text/javascript" src="js/edit1.js"></script>
+    </body>
+</html>

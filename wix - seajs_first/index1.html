@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/comm.css" />
+        <style type="text/css">
+        #rap{
+            background-color:white;
+        }
+        #back{
+            background-color:blue;
+            width:120px;
+            height:30px;
+            font-size:19px;
+            line-height:30px;
+            text-align: center;
+            color:white;
+            position:absolute;
+            right:30px;
+            top:30px;
+            z-index: 6;
+            text-decoration:none;
+        }
+        </style>
+    </head>
+    <body>
+    <p style="text-align:center;font-size:30px;">这是第一个预览页</p>
+      <a href="index.html" id="back">返回编辑</a>
+      <div id="wrapNav"></div>
+      <div id="rap"></div>
+      <div id="wrapAlbum"></div>   
+    <script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript">
+
+    var album = document.getElementById("album");
+    var wrapAlbum = document.getElementById("wrapAlbum");
+    var wrapNav = document.getElementById("wrapNav");
+    var gg = localStorage.getItem("gg");//取数据
+    var demyhtml = decodeUTF8(gg);      //解码
+    rap.innerHTML = demyhtml;           //渲染
+    //如果存储了Album数据
+     if(localStorage.getItem("Album")){
+        var enwrapAlbum = localStorage.getItem("Album");
+        var dewrapAlbum = decodeUTF8(enwrapAlbum);
+        wrapAlbum.innerHTML = dewrapAlbum;
+        var plists = document.getElementsByClassName("pblock");//对所有P标签的可编辑属性更改
+        var lens = plists.length;
+        for(var i = 0;i < lens;i++){
+            plists[i].setAttribute("contenteditable","false");
+        }
+     }
+     //如果存储了nav数据
+     if(localStorage.getItem("nav")){
+        var nav = localStorage.getItem("nav");
+        var denav = decodeUTF8(nav);
+        wrapNav.innerHTML = denav;
+        var alists = document.getElementsByClassName("nava");//对所有a标签的可编辑属性更该为不可以编辑
+        var lens = alists.length;
+        for(var i = 0;i < lens;i++){
+            alists[i].setAttribute("contenteditable","false");
+        }
+     }
+    //对相册的编辑
+    // wrapAlbum.childNodes[0].addEventListener("mouseover",function(e){
+    //     var e = e || e.event;
+    //     var target = e.target;
+    //     if(target.tagName == "IMG"){
+    //      console.log(target.nextSibling);
+    //      target.nextSibling.style.zIndex = 1;
+    //     }
+    //  })
+    // wrapAlbum.childNodes[0].addEventListener("mouseout",function(e){
+    //     var e = e || e.event;
+    //     var target = e.target;
+    //     console.log(target);
+    //     if(target.id == "indiv"){
+    //        target.style.zIndex = -1; 
+    //     }
+    //  })
+    </script>
+    <script type="text/javascript" src="js/tab.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/comm.css" />
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <style type="text/css">
+
+         /*放大缩小的下拉滑块*/
+         .dragspan{
+            width:10px;
+            height:10px;
+            background-color:black;
+            opacity:0.2;
+            position:absolute;
+            bottom:0;
+            right:0;
+            cursor:se-resize;
+            border-radius:50%;
+            z-index:3;
+         } 
+         .dragspan1{
+            width:20px;
+            height:100%;
+            opacity:0;
+            background-color: red;
+            position:absolute;
+            top:0;
+            right:0;
+            z-index:10001;
+            cursor:e-resize;
+         } 
+         .dragspan2{
+            width:20px;
+            height:100%;
+            background-color:red;
+            position:absolute;
+            top:0;
+            right:0;
+            z-index:10001;
+            cursor:e-resize;
+            opacity:0;
+         }
+         .imgbox img{
+            cursor:move;
+         }
+         .pblock{
+            width:150px;
+            min-width: 100px;
+            height:30px;
+            font-size:16px;
+            line-height:30px;
+            top:0;
+            left:0;
+         }
+         #fontchange_part{
+            background-color:cyan;
+         }
+        .pspan{
+            position: absolute;;
+            width:100%;
+            height:100%;
+            left:0;
+            top:0;
+            /*outline:none;*/
+        }
+        .editor{
+            width:400px;
+            padding:5px;
+            border:3px solid brown;
+            cursor:move;
+            margin:20px;
+            /*background-color:cyan;*/
+        }
+        .createbox{
+            /*background-color:cyan;*/
+        }
+        .sun_editor{
+            position:relative;
+            display: inline-block;
+            width:190px;
+            height:60px;
+            text-align: center;
+            margin-top:10px;
+        }
+        .sun_editor>div{
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            background-color:green;
+            z-index:-1;
+        }
+        #submit,#hide{
+            background-color:blue;
+            width:120px;
+            height:30px;
+            font-size:19px;
+            line-height:30px;
+            text-align: center;
+            color:white;
+            position:absolute;
+            right:30px;
+            top:30px;
+            z-index: 6;
+        }
+        #hide{
+            right:170px;
+        }
+
+
+        </style>
+    </head>
+    <body>
+    <p style="text-align:center;font-size:30px;">这是第一个编辑页</p>
+    <div id="createbox">
+    <button id="btn">点击一下创建div标签</button>
+    <button id="btn1">点击一下创建p标签</button>
+    <button id="btn2">点击创建图片</button>
+    <button id="btn3">点击创建相册</button>
+    <button id="btn4">点击创建导航栏</button>
+    <button id="btn5">点击创建滚动图</button>
+    </div>
+
+<ul class="editor">
+    <li class="sun_editor">
+           <label for="">
+                选择图片
+               <select name="" id="Imgsrc">
+                    <option >1.jpg</option>
+                    <option >2.jpg</option>
+                    <option >3.jpg</option>
+                    <option >4.jpg</option>
+                    <option >5.jpg</option>
+                    <option >6.jpg</option>
+                    <option >7.jpg</option>
+               </select>
+           </label>
+           <div></div>
+    </li>
+    <li class="sun_editor">
+            <label >
+                请改变背景颜色
+                <input type="color" value="#000000" id="color">
+            </label> 
+            <div></div> 
+    </li>
+    <li class="sun_editor">
+            <label >
+                请改变字体颜色
+                <input type="color" value="#000000" id="word_color">
+            </label> 
+            <div></div> 
+    </li>
+    <li class="sun_editor">
+             <label >
+                请改变字体大小
+                <select name="" id="fontchange">
+                    <option >16px</option>
+                    <option >17px</option>
+                    <option >18px</option>
+                    <option >19px</option>
+                    <option >20px</option>
+                    <option >21px</option>
+                    <option >22px</option>
+                    <option >16px</option>
+                    <option >17px</option>
+                    <option >18px</option>
+                    <option >19px</option>
+                    <option >20px</option>
+                    <option >21px</option>
+                    <option >22px</option>
+               </select>        
+            </label> 
+            <div></div>          
+    </li>
+    <li class="sun_editor">
+            <label>
+                手动输入字体大小
+                    <input id="fontchange1" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="2" size="14"  type="text" />
+            </label> 
+            <div></div>     
+    </li>
+    <li class="sun_editor">
+            <label >
+                请改变字体
+                <select name="" id="fontchange2">
+                    <option >Microsoft YaHei </option>
+                    <option >SimHei </option>
+                    <option >KaiTi </option>
+                    <option >FangSong</option>
+                    <option >NSimSun</option>
+                    <option >SimSun</option>
+               </select>        
+        </label>
+        <div></div>
+    </li>
+    <li class="sun_editor">
+        <button id="fontchange3">斜体</button> 
+        <div></div>
+    </li>
+</ul>   
+
+    <!-- 链接改变 -->
+<!--     <label >
+    链接
+     <input type="text" id="lianjie" / value="http://www.cctv.com">   
+    </label>
+
+    <button id="imgsrcChange">更改相册图片链接</button>
+    <button id="asrcChange">更改a标签链接</button> -->
+
+<!--  编辑器模块结束 -->
+    <button id="hide">隐藏编辑栏</button>
+    <button id="submit">预览</button>
+    <div id="wrapNav"></div>
+    <div id="rap"></div>
+    <div id="wrapAlbum">
+<!--         <div id="album">
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg1" class="0"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg2" class="1"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg3" class="2"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg4" class="3"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg5" class="4"></a>
+            <a href="javascript:void(0);"><img src="2.jpg" alt="" / id="alimg6" class="5"></a>
+        </div>   -->
+    </div>
+    <script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript" src="js/edit.js"></script>
+    <script type="text/javascript" src="js/createAlbum.js"></script>
+    <script type="text/javascript" src="js/createNav.js"></script>
+    <script type="text/javascript" src="js/createBlock.js"></script>
+    <script type="text/javascript" src="js/createp.js"></script>
+    <script type="text/javascript" src="js/createImg.js"></script>
+    <script type="text/javascript" src="js/wordColor.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+    <script type="text/javascript" src="js/createTab.js"></script>
+    <!-- <script type="text/javascript" src="js/editor.js"></script> -->
+
+    </body>
+</html>
