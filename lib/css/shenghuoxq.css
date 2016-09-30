@@ -1,0 +1,70 @@
+.fangchan{
+	width: 100%;
+}
+.js{
+	padding: 3% 3%;
+}
+.js>p:nth-of-type(1){
+    font-size: 1.6rem;
+    color: #141414;
+    margin-bottom: 1%;
+
+}
+.js>p:nth-of-type(2){
+	font-size: 1.5rem;
+	color:#595959;
+}
+.dianhua{
+	width: 11px;
+	/*margin-top:3%;*/
+	vertical-align: middle;
+}
+.xinxi{
+	padding: 3% 3%;
+}
+.xinxi>div{
+	display: inline-block;
+	padding-left: 3%;
+}
+.xinxi>div>p:nth-of-type(1){
+	font-size: 1.5rem;
+	color: #1e1d1d;
+}
+.xinxi>div>p:nth-of-type(2){
+	font-size: 1.3rem;
+	color: #514f4f;
+}
+.xinxi>div>div>span{
+	color: #0add27;
+	font-size: 1.3rem;
+}
+.xinxi>div>div>span:nth-of-type(2){
+	color: #514f4f;
+}
+.xinxi>div>div{
+	margin-top: 19%;
+}
+.tupian{
+	padding: 3% 3%;
+}
+.tupian img{
+	width: 100%;
+}
+#body{
+	padding: 0;
+
+}
+
+.xinhedan{
+	width: 30%;
+	vertical-align: top;
+}
+
+
+
+
+
+
+
+
+

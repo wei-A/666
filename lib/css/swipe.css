@@ -1,0 +1,36 @@
+.wrap{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.inner{
+	height: 100%;
+	width: 500%;
+	position: relative;
+}
+.inner img{
+	float:left;
+	width:20%;
+}
+.wrap>.button{
+	height: 10px;
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+.Span{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-left: 4px;
+	margin-right: 4px;
+	line-height: 8px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: gray;
+}
+
+.active{
+	background-color:rgb(242,144,4);
+}

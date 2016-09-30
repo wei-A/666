@@ -1,0 +1,51 @@
+.header1{
+	width: 10px;
+	margin-top: 14px;
+
+}
+.city{
+	font-size: 2rem;
+	color: white;
+	margin-left: 42%;
+}
+.content{
+	background-color: rgb(242,242,242);
+
+}
+.content p{
+	height: 55px;
+	font-size: 1.6rem;
+	padding-left: 3%;	
+	border-bottom: 1px solid rgb(229,229,229);
+	line-height: 55px;
+	box-sizing: border-box;
+}
+.weizhi,.liebiao{
+	height: 40px;
+}
+.liebiao{
+	background-color: rgb(230,230,230);
+}
+.shop-title{
+	display: inline-block;
+	height: 44px;
+	line-height: 44px;
+	font-size: 1.8rem;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	color: white;
+	width: 100px;
+	text-align: center;
+	margin-left: -50px;
+
+}
+.back-icon{
+	display: inline-block;
+	height: 44px;
+	width: 15px;
+	vertical-align: top;
+	background:url(../img/icon4.png) no-repeat;
+	background-size: 10px 18px;
+	background-position: center center;	
+}

@@ -1,0 +1,57 @@
+.zc{
+	font-size: 1.6rem;
+	color: white;
+	margin-left: 33%;
+	height: 44px;
+	line-height: 44px;
+	float: right;
+}
+.body{
+	background-color: rgb(237,239,240);
+}
+.dlpng{
+	width: 26%;
+	margin-left: 37%;
+	margin-top: 10%;
+}
+.lr{
+	height: 100%;
+	width: 100%;
+	padding: 0 7%;
+	box-sizing: border-box;
+}
+#zh,#ma{
+	border:1px solid rgb(219,219,219);
+	width: 100%;
+	border-radius: 5px;
+	height: 43px;
+	text-indent: 40px;
+	font-size: 1.4rem;
+
+}
+#zh{
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+.wang{
+	text-align: right;
+	margin-top: 8px;
+	font-size: 1.2rem;
+	color: #f29004;
+}
+.tj{
+	width: 100%;
+	margin-left: 0;
+}
+#zh{
+	background: url(../img/rentou.png) no-repeat;
+	background-size: 15px 15px;
+	background-color: white;
+	background-position: 15px 14px;
+}
+#ma{
+	background: url(../img/suo.png) no-repeat;
+	background-size: 13px 18px;
+	background-color: white;
+	background-position: 15px 12px;
+}
