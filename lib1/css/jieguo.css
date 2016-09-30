@@ -1,0 +1,30 @@
+.sousuo1{
+	position: absolute;
+	width: 20px;
+	top: 30%;
+	left: 87%;
+}
+.neirong{
+	background-color: rgb(242,242,242);
+}
+.jieguo{
+	padding:1% 3%;
+}
+.jieguo>div{
+	height: 70px;
+	margin-top: 3%;
+
+}
+.jieguo>div img{
+	width: 70px;
+	vertical-align: top;
+}
+.jieguo>div div{
+	display: inline-block;
+	padding-left: 3%;
+	font-size: 1.5rem;
+}
+.jiage{
+	color: red;
+	margin-top: 15px;
+}

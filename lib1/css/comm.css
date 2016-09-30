@@ -1,0 +1,381 @@
+body,html{
+	width: 100%;
+}
+body{
+	padding-top: 44px;
+	position: relative;
+	max-width: 750px;
+	padding-bottom: 60px;
+}
+.header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 44px;
+	background-color: rgb(242,144,4);
+	padding-left: 3%;
+	padding-right: 3%;
+	box-sizing: border-box;
+	z-index: 1110;
+	max-width: 750px;
+}
+
+footer{
+	height: 50px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 750px;
+	/*background-color: red;*/
+}
+footer div{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+.footer1{
+	background: url(../img/home-2.png) no-repeat;
+	background-size: 23px 36px;
+	background-position:center center;
+	background-color: white;
+}
+.footer2{
+	background: url(../img/vip-1.png) no-repeat;
+	background-size: 43px 35px;
+	background-position:center center;
+	background-color: white;
+}
+.footer3{
+	background: url(../img/classfy-1.png) no-repeat;
+	background-size: 22px 35px;
+	background-position:center center;
+	background-color: white;
+}.footer4{
+	background: url(../img/cart-1.png) no-repeat;
+	background-size: 32px 35px;
+	background-position:center center;
+	background-color: white;
+}.footer5{
+	background: url(../img/mine-1.png) no-repeat;
+	background-size: 21px 36px;
+	background-position:center center;
+	background-color: white;
+}
+
+.shouji{
+	width: 100%;
+}
+.shouchang{
+	top: 15px;
+	position: absolute;
+	width: 25px;
+	right: 65px;
+}
+.fenxiang{
+	position: absolute;
+	top: 17px;
+	width: 25px;
+	right: 10px;
+}
+.fanhui{
+	position: absolute;
+	top: 15px;
+	left: 10px;
+   width: 10px;
+}
+.mengcheng{
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background:linear-gradient(rgba(0,0,0,0.3), rgba(255,255,255,0));
+	padding:0 3%;
+	box-sizing: border-box;
+	max-width: 750px;
+	margin: 0 auto;
+}
+.back-icons,.collect-icons,.share-icons{
+	display: inline-block;
+	height: 50px;
+}
+.back-icons{
+	width: 10%;
+	float: left;
+	background:url(../img/icon4.png) no-repeat;
+	background-size: 10px 18px;
+	background-position: left center;
+}
+.collect-icons{
+	width: 23%;
+	float: right;
+	background:url(../img/shouchang.png) no-repeat;
+	background-size: 25px 24px;
+	background-position: center center;
+}
+.share-icons{
+	width: 26px;
+	float: right;
+    background:url(../img/fenxiang.png) no-repeat;
+	background-size: 25px 20px;
+	background-position: right center;
+}
+.jieshao{
+	padding: 0 3%;
+}
+.up>p{
+	font-size: 1.5rem;
+	color: #141414;
+	line-height: 40px;
+}
+.xianjia{
+	font-size: 1.6rem;
+	color: #ff3f12;
+	display: inline-block;
+	height: 20px;
+}
+.original-price,.original-num,.sales-volume{
+	font-size: 1.3rem;
+	color: #666;
+	display: inline-block;
+	height: 20px;
+}
+.up-details{
+	width: 100%;
+	height: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d9d9d9;
+}
+.xianjia,.original-price,.original-num,{
+	float: left;
+}
+.sales-volume{
+	float: right;
+}
+.original-price{
+	width: 15%;
+	text-align: right;
+}
+.down{
+	height: 43px;
+	width: 100%;
+}
+.down span{
+	display: inline-block;
+	width: 50%;
+	float: left;
+	font-size: 1.3rem;
+	color: #666;
+	line-height: 43px;
+}
+.down>span:nth-of-type(2){
+	text-align: right;
+}
+
+
+.fenge{
+	height: 10px;
+	background-color: rgb(242,242,242);
+}
+.xuanxiang{
+	font-size: 1.3rem;
+	height: 40px;
+}
+.xuanxiang span{
+	line-height: 38px;
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	float: left;
+	margin:0 12.5%;
+	
+}
+.active{
+	border-bottom:2px solid rgb(255,59,14);
+}
+.neirong1{
+	display: block;
+}
+.neirong2{
+	display: none;
+}
+.neirong1,.neirong2{
+	border-top:1px solid rgb(217,217,217);
+	border-bottom:1px solid rgb(217,217,217);
+	padding: 13px;
+	
+}
+.neirong2 p{
+	height: 16px;
+	line-height: 16px;
+	font-size: 1.5rem;
+	margin-top: 15px;
+}
+.judge-box{
+	width: 100%;
+	height: 15px;
+}
+.neirong2 span{
+	display: inline-block;
+	height: 15px;
+	line-height: 15px;
+	font-size: 1.3rem;
+}
+.judge-time{
+	float: right;
+	color: #010101;
+}
+.judge-stars,.judge-user{
+	float: left;
+}
+.judge-stars{
+	width: 18px;
+	background:url(../img/1.png) no-repeat;
+	background-size: 9px 9px;
+	background-position: center center;
+}
+.judge-stars1{
+	margin-left: 2%;
+}
+.judge-stars-active{
+	background:url(../img/0.png) no-repeat;
+	background-size: 9px 9px;
+	background-position: center center;	
+}
+.neirong1 p{
+	font-size: 1rem;
+	text-indent: 2rem;
+	line-height:19px;
+}
+footer{
+	height: 50px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: rgb(242,242,242);
+	padding:0 3%;
+	max-width: 750px;
+	box-sizing: border-box;
+}
+
+footer .img4{
+	border-radius: 7px;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	top: 24%;
+	left: 64%;
+	text-align: center;
+	line-height: 14px;
+	background-color: rgb(230,30,57);
+	color: white;
+}
+.mengban{
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+
+}
+#fenxiang{
+	height: 235px;
+	width: 100%;
+	background-color: white;
+	position: fixed;
+	bottom: 0;
+	z-index: 101;
+    display: none;
+    max-width:750px;
+}
+#fenxiang p{
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 18px;
+	margin-bottom: 0px;
+}
+#fenxiang img{
+	width: 52px;
+}
+.cancel-button{
+	display: inline-block;
+	width: 84%;
+	height: 45px;
+	left: 8%;
+	position: absolute;
+	background-color: rgb(191,193,194);
+	text-align: center;
+	border-radius: 5px;
+	font-size: 1.3rem;
+	line-height: 45px;
+	bottom: 1%;
+
+}
+.chongzhi{
+	position: fixed;
+	width: 78%;
+	left: 11%;
+	top: 40%;
+	display: none;
+	z-index: 102;
+	max-width: 500px;
+}
+.share-icon-1,.share-icon-2,.share-icon-3{
+	display: inline-block;
+	width: 33%;
+	height: 55%;
+	float: left;
+}
+.share-icon-box{
+	width: 100%;
+	height: 60%;
+	margin-top: 5%;
+	position: relative;
+}
+.share-icon-1{
+	background:url(../img/weixin-icon.png) no-repeat;
+	background-size: 53px 72px;
+	background-position: center center;
+}
+.share-icon-2{
+	background:url(../img/friends-icon.png) no-repeat;
+	background-size: 60px 73px;
+	background-position: center center;
+}
+.share-icon-3{
+	background:url(../img/weibo-icon.png) no-repeat;
+	background-size: 53px 73px;
+	background-position: center center;
+}
+.shopping-cart{
+	width: 40px;
+	height: 50px;
+	background:url(../img/gouwuche.png) no-repeat;
+	background-size: 29px 28px;
+	background-position: center center;
+	float: left;
+	position: relative;
+}
+.put-in-cart,.buy-soon{
+	display: inline-block;
+	width: 28%;
+	height: 30px;
+	margin-top: 10px;
+	float:right;
+	background-color: red;
+	border-radius: 4px;
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+}
+.put-in-cart{
+	background-color: #ed9d2a;
+	margin-right: 3%;
+}
+.buy-soon{
+	background-color: #ee3749;
+}

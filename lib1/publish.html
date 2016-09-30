@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商城首页</title>
+
+</head>
+<link rel="stylesheet" type="text/css" href="css/shouye.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/swipe.css">
+<link rel="stylesheet" type="text/css" href="css/comm.css">
+<body class="body" id="body">
+<div class="www">
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/touch-0.2.14.min.js"></script>
+<script type="text/javascript" src="js/jquery.swipe.js"></script>
+<!-- <script type="text/javascript" src="js/edit.js"></script> -->
+<script type="text/javascript">
+$(function(){
+$("wrap").swiper({
+    autoplay: true,
+    animate: true
+})  
+
+function decodeUTF8(str){
+return str.replace(/(\\u)(\w{4}|\w{2})/gi, function($0,$1,$2){
+    return String.fromCharCode(parseInt($2,16));
+}); 
+} 
+var gg = localStorage.getItem("gg");
+gg = decodeUTF8(gg);
+$(".www").html(gg);
+$(".header img").eq(0).on("click",function(){
+ window.location.href = "dingwei.html"
+})
+$(".down-icon").on("click",function(){
+ window.location.href = "dingwei.html"
+})
+$(".search-icon").on("click",function(){
+ window.location.href = "sousuo.html"
+})
+$(".onsale-ads >a").on("click",function(){
+ window.location.href = "tejia.html";
+})
+$(".shenghuo").on("click",function(){
+ window.location.href = "shenghuo.html";
+})
+$(".shiping").on("click",function(){
+ window.location.href = "shiping.html";
+})
+$(".yongping").on("click",function(){
+ window.location.href = "yongping.html";
+})
+$(".jiaju").on("click",function(){
+ window.location.href = "jiaju.html";
+})
+$(".kefu").on("click",function(){
+ window.location.href = "kefu.html";
+})
+$(".footer5").on("click",function(){
+ window.location.href = "my-information/huiyuan.html"
+})
+})
+
+</script>
+</body>
+</html>

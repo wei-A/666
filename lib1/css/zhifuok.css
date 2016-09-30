@@ -1,0 +1,26 @@
+.ok{
+	width: 20%;
+	margin-left: 40%;
+	margin-top: 15%;
+}
+p{
+	font-size: 1.8rem;
+	text-align: center;
+	margin-top: 8%;
+}
+.goon{
+	display: inline-block;
+	height: 32px;
+	width:34%;
+	color: white;
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 32px;
+	background-color: rgb(228,41,55);
+	border-radius: 3px;
+	margin-top: 22%;
+	margin-left: 33%;
+}
+.city{
+	margin-left: 36%;
+}
